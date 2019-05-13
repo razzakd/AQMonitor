@@ -1,0 +1,4 @@
+agm-map { height: 600px; /* height is required */ }
+agm-marker {
+  color: #4cff00; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: medium; font-weight: bold
+}

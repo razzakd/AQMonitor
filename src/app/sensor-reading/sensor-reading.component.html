@@ -1,0 +1,36 @@
+<div class="container-fluid" *ngIf="sensorData[0]">
+  <agm-map [latitude]='lat' [longitude]='lng'
+           [mapTypeId]='mapType' [zoom]="18">
+    <agm-marker [latitude]="lat" [longitude]="lng" [label]="M" class="agm-marker">
+      <agm-info-window [disableAutoPan]="true">
+        User: <strong>{{userLabel}}</strong><br />
+        Avg. Temp: <strong>{{averageTemperature}} &#8451;</strong><br />
+        Avg. Hum: <strong>{{averageHumidity}}% (RH)</strong>
+      </agm-info-window>
+    </agm-marker>
+    <agm-circle [latitude]="lat" [longitude]="lng"
+                [radius]="100"
+                [fillColor]="airQualityIndicator"
+                [circleDraggable]="false"
+                [editable]="true"></agm-circle>
+  </agm-map>
+  <!--<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Temperature</th>
+        <th scope="col">Humidity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Location - Lat :{{sensorData[0]['Location'][0]["Latitude"]}} / Long:{{sensorData[0]['Location'][0]["Longitude"]}}</td></tr>
+      <ng-container *ngFor="let data of sensorData[0]['Location'][1]['AQ']">
+        <tr>
+          <td>{{data["Date"]}}</td>
+          <td>{{data["Temperature"]}}</td>
+          <td>{{data["Humidity"]}}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>-->
+</div>

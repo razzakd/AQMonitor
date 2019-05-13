@@ -1,0 +1,10 @@
+<nav class="nav navbar-inverse" *ngIf="isLoggedIn$ | async as isLoggedIn">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/sensor-reading" routerLinkActive="active">
+      Air Quality Reading
+    </a>
+    <a class="navbar-brand" (click)="onLogout()" routerLink="" routerLinkActive="active">
+      Logout
+    </a>
+  </div>
+</nav>
