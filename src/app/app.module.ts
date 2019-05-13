@@ -20,7 +20,7 @@ import { AgmCoreModule } from '@agm/core';
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBE6sS83G1guDUFakkoWqJp_MEnSaSQvyo'
+      apiKey: ''
     })
   ],
   providers: [AuthenService],
